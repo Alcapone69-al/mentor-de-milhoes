@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saylor JR · Mentor de Milhões</title>
+<meta name="description" content="Sala VIP de Bac Bo com apoio de IA e comunidade de Aviator em MZN, EUR e USD. Aprende gestão de banca e disciplina com o Saylor JR. +18 · Joga com responsabilidade.">
+<meta name="theme-color" content="#0A0F14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0F14'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='600' text-anchor='middle' fill='%23D8A94B'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://alcapone69-al.github.io/mentor-de-milhoes/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_MZ">
+<meta property="og:title" content="Saylor JR · Mentor de Milhões">
+<meta property="og:description" content="Sala VIP de Bac Bo ao vivo e comunidade de Aviator. Vagas limitadas esta semana — fala comigo no Telegram ou WhatsApp.">
+<meta property="og:url" content="https://alcapone69-al.github.io/mentor-de-milhoes/">
+<meta property="og:image" content="https://alcapone69-al.github.io/mentor-de-milhoes/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="img/saylor.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    box-sizing:border-box;
+    --bg:#0A0F14;
+    --bg-panel:#0F161D;
+    --bg-panel-2:#131C24;
+    --line:#223038;
+    --text:#EDEBE3;
+    --text-dim:#9AAAB3;
+    --gold:#D8A94B;
+    --gold-dim:#8A6E33;
+    --up:#3E9C74;
+    --down:#B4543A;
+    --font-display:'Fraunces', Georgia, serif;
+    --font-mono:'JetBrains Mono', monospace;
+    --font-body:'Inter', -apple-system, sans-serif;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  html,body{height:100%;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- ticker ---------- */
+  .ticker{
+    background:#050809;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:9px 0;
+  }
+  .ticker-track{
+    display:inline-flex;
+    gap:36px;
+    animation:scroll 28s linear infinite;
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    letter-spacing:.02em;
+    color:var(--text-dim);
+  }
+  .ticker-track span.up{color:var(--up);}
+  .ticker-track span.down{color:var(--down);}
+  @keyframes scroll{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){ .ticker-track{animation:none;} }
+
+  /* ---------- header ---------- */
+  header{
+    padding:22px 0 12px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--text-dim);
+    letter-spacing:.03em;
+  }
+  .brand b{color:var(--gold); font-weight:600;}
+  .live-dot{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:var(--font-mono); font-size:11.5px; color:var(--up);
+  }
+  .live-dot i{
+    width:6px; height:6px; border-radius:50%; background:var(--up);
+    box-shadow:0 0 0 0 rgba(62,156,116,.6);
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(62,156,116,.55);}
+    70%{box-shadow:0 0 0 7px rgba(62,156,116,0);}
+    100%{box-shadow:0 0 0 0 rgba(62,156,116,0);}
+  }
+
+  /* ---------- hero banner ---------- */
+  .hero-banner{
+    position:relative;
+    width:100%;
+    height:min(78vw, 560px);
+    max-height:640px;
+    overflow:hidden;
+  }
+  .hero-banner img{
+    width:100%; height:100%; object-fit:cover; object-position:50% 20%;
+    display:block;
+  }
+  .hero-banner::after{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(10,15,20,0) 45%, var(--bg) 96%);
+  }
+  .hero-banner .banner-tag{
+    position:absolute; left:20px; bottom:18px;
+    font-family:var(--font-mono); font-size:11px; color:var(--text);
+    background:rgba(10,15,20,.55);
+    border:1px solid var(--line);
+    padding:6px 12px; border-radius:100px;
+    backdrop-filter:blur(4px);
+    z-index:2;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:28px 0 40px; text-align:center;}
+  .badge{
+    font-family:var(--font-mono); font-size:11.5px; color:var(--gold);
+    border:1px solid var(--gold-dim); border-radius:100px;
+    padding:5px 14px; display:inline-block; margin-bottom:22px;
+    letter-spacing:.02em;
+  }
+  h1{
+    font-family:var(--font-display);
+    font-weight:500;
+    font-size:clamp(34px, 6.4vw, 54px);
+    line-height:1.08;
+    letter-spacing:-.01em;
+    max-width:15ch; margin:0 auto 18px;
+  }
+  h1 em{font-style:italic; color:var(--gold); font-weight:500;}
+  .sub{
+    max-width:46ch; margin:0 auto 30px;
+    color:var(--text-dim); font-size:16px; line-height:1.65;
+  }
+  .proof-line{
+    font-family:var(--font-mono); font-size:12.5px; color:var(--text-dim);
+    margin-bottom:34px;
+  }
+  .proof-line b{color:var(--text); font-weight:600;}
+
+  /* ---------- CTA buttons ---------- */
+  .cta-row{
+    display:flex; flex-wrap:wrap; gap:12px; justify-content:center;
+    margin-bottom:14px;
+  }
+  .btn{
+    font-family:var(--font-body); font-weight:600; font-size:15px;
+    padding:14px 26px; border-radius:8px;
+    display:inline-flex; align-items:center; gap:9px;
+    border:1px solid transparent;
+    transition:transform .15s ease, opacity .15s ease;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-gold{background:var(--gold); color:#14100A;}
+  .btn-outline{border-color:var(--line); color:var(--text);}
+  .btn-outline:hover{border-color:var(--gold-dim);}
+  .btn svg{width:17px; height:17px; flex-shrink:0;}
+
+  .disclaimer-chip{
+    max-width:480px; margin:26px auto 0;
+    font-size:12.5px; color:var(--text-dim);
+    border:1px solid var(--line); border-radius:10px;
+    padding:12px 16px; text-align:left; line-height:1.55;
+  }
+  .disclaimer-chip b{color:var(--gold); display:block; margin-bottom:3px; font-size:12.5px;}
+
+  /* ---------- offers ---------- */
+  .section{padding:56px 0;}
+  .section-head{margin-bottom:30px;}
+  .eyebrow{
+    font-family:var(--font-mono); font-size:11.5px; color:var(--gold);
+    margin-bottom:8px; letter-spacing:.02em;
+  }
+  h2{
+    font-family:var(--font-display); font-weight:500;
+    font-size:clamp(26px, 4.4vw, 34px); letter-spacing:-.01em;
+    max-width:20ch;
+  }
+
+  .offers{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:680px){.offers{grid-template-columns:1fr;}}
+  .offer{
+    background:var(--bg-panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:26px 24px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .offer .tag{
+    font-family:var(--font-mono); font-size:11px; color:var(--text-dim);
+    text-transform:uppercase; letter-spacing:.06em;
+  }
+  .offer h3{
+    font-family:var(--font-display); font-weight:500; font-size:21px;
+  }
+  .offer p{color:var(--text-dim); font-size:14.5px; line-height:1.6; flex-grow:1;}
+  .offer .btn{width:100%; justify-content:center; margin-top:4px;}
+
+  /* ---------- steps ---------- */
+  .steps{display:flex; flex-direction:column; gap:0; max-width:58ch;}
+  .step{
+    display:flex; gap:16px; align-items:flex-start;
+    padding:16px 0;
+    border-top:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:1px solid var(--line);}
+  .step-n{
+    font-family:var(--font-mono); font-size:13px; color:var(--gold);
+    border:1px solid var(--gold-dim); border-radius:50%;
+    width:26px; height:26px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .step p{color:var(--text-dim); font-size:14.5px; line-height:1.6; padding-top:3px;}
+
+  /* ---------- media placeholders ---------- */
+  .media-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:10px;
+  }
+  @media (max-width:680px){.media-grid{grid-template-columns:repeat(2,1fr);}}
+  .media-slot{
+    aspect-ratio:4/5;
+    background:var(--bg-panel);
+    border:1px dashed var(--line);
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+    position:relative;
+  }
+  .media-slot img, .media-slot video{width:100%; height:100%; object-fit:cover;}
+  .media-slot .ph{
+    font-family:var(--font-mono); font-size:10.5px; color:var(--text-dim); text-align:center; padding:10px;
+  }
+  .video-slot{aspect-ratio:9/16; border-style:solid; background:#000;}
+  .video-grid{grid-template-columns:repeat(2,1fr); max-width:560px;}
+  @media (max-width:680px){.video-grid{max-width:none;}}
+  .media-slot video{object-fit:contain;}
+  .video-slot .play{
+    position:absolute; width:38px; height:38px; border-radius:50%;
+    background:rgba(216,169,75,.15); border:1px solid var(--gold-dim);
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* ---------- story ---------- */
+  .story{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:14px;
+    padding:30px 28px; display:flex; gap:22px; align-items:flex-start;
+  }
+  @media (max-width:600px){.story{flex-direction:column;}}
+  .story .pic{
+    width:84px; height:84px; border-radius:12px; flex-shrink:0;
+    background:var(--bg-panel-2); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .story .pic img{width:100%; height:100%; object-fit:cover;}
+  .story .pic .ph{font-family:var(--font-mono); font-size:9.5px; color:var(--text-dim); text-align:center;}
+  .story p{color:var(--text-dim); font-size:15px; line-height:1.7;}
+  .story p + p{margin-top:12px;}
+  .story .stat-row{
+    display:flex; gap:22px; margin-top:18px; font-family:var(--font-mono); font-size:12px; color:var(--text-dim);
+  }
+  .story .stat-row b{display:block; color:var(--gold); font-size:19px; font-family:var(--font-body); font-weight:700;}
+
+  /* ---------- warning box ---------- */
+  .warning{
+    border:1px solid var(--down); border-radius:12px;
+    background:rgba(180,84,58,.08);
+    padding:20px 22px; display:flex; gap:14px; align-items:flex-start;
+  }
+  .warning svg{flex-shrink:0; margin-top:2px; width:20px; height:20px; color:var(--down);}
+  .warning p{font-size:14px; color:var(--text-dim); line-height:1.65;}
+  .warning b{color:var(--text);}
+
+  /* ---------- final CTA ---------- */
+  .final{
+    text-align:center; padding:60px 0 70px;
+    border-top:1px solid var(--line);
+  }
+  .final h2{margin:0 auto 14px; max-width:16ch;}
+  .final .sub{margin-bottom:32px;}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:26px 0 calc(26px + env(safe-area-inset-bottom,0px));
+    text-align:center;
+  }
+  footer p{font-size:12px; color:var(--text-dim); line-height:1.7; max-width:52ch; margin:0 auto;}
+  footer .brandline{font-family:var(--font-mono); font-size:11.5px; color:var(--text-dim); margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<div class="wrap">
+  <header>
+    <div class="brand">MENTOR DE <b>MILHÕES</b></div>
+    <div class="live-dot"><i></i>VAGAS ABERTAS</div>
+  </header>
+</div>
+
+<div class="hero-banner">
+  <img src="img/saylor.webp" alt="Saylor JR">
+  <span class="banner-tag">Saylor JR</span>
+</div>
+
+<div class="wrap">
+  <section class="hero">
+    <span class="badge">🚨 Vagas limitadas esta semana</span>
+
+    <h1>Aprende a operar com <em>estratégia</em>, não com sorte</h1>
+
+    <p class="sub">
+      Entra na Sala VIP e acompanha operações de Bac Bo ao vivo com apoio da minha IA,
+      ou junta-te à comunidade de Aviator em Euro, Dólar, Metical ou outra moeda e aprende a operar com estratégia.
+    </p>
+
+    <p class="proof-line">🔥 Mais de <b>2.500 pessoas</b> já acompanharam os meus métodos e tiveram as suas próprias experiências.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://t.me/mentor_de_milhoes?text=sauda%C3%A7%C3%B5es%20mentor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">
+        Entrar no Telegram
+      </a>
+      <a class="btn btn-outline" href="https://wa.me/258874031855?text=Sauda%C3%A7%C3%B5es%20Mentor%20Saylor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">
+        Falar no WhatsApp
+      </a>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-outline" href="https://www.instagram.com/saylor_jr_calege/" target="_blank" rel="noopener">
+        Seguir no Instagram
+      </a>
+    </div>
+
+    <div class="disclaimer-chip">
+      <b>⚠️ Importante</b>
+      Não existem resultados 100% garantidos nas apostas. Os nossos métodos não eliminam os riscos e não prometem lucro. O objetivo é ajudar-te a compreender melhor as operações, gerir a tua banca e tomar decisões com mais informação e disciplina.
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">Duas portas de entrada</div>
+      <h2>Escolhe o caminho certo para ti</h2>
+    </div>
+    <div class="offers">
+      <div class="offer">
+        <div class="tag">Sala VIP · Bac Bo</div>
+        <h3>Operações ao vivo com apoio de IA</h3>
+        <p>Acompanha as operações em tempo real com o suporte da minha IA, entendendo cada entrada e o raciocínio por trás dela — sem promessas de lucro garantido.</p>
+        <a class="btn btn-gold" href="https://t.me/mentor_de_milhoes?text=sauda%C3%A7%C3%B5es%20mentor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">Entrar na Sala VIP</a>
+      </div>
+      <div class="offer">
+        <div class="tag">Comunidade · Aviator</div>
+        <h3>Estratégia em Euro, Dólar ou Metical</h3>
+        <p>Aprende a operar Aviator com método e gestão de banca, na moeda que preferires, com uma comunidade focada em disciplina e consciência de risco.</p>
+        <a class="btn btn-gold" href="https://wa.me/258874031855?text=Sauda%C3%A7%C3%B5es%20Mentor%20Saylor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">Como funciona</div>
+      <h2>Como funcionam as comunidades Mentor de Milhões?</h2>
+    </div>
+    <p style="color:var(--text-dim); font-size:15px; line-height:1.7; max-width:58ch; margin-bottom:28px;">
+      O Mentor de Milhões opera todos os dias, ao vivo, dentro das comunidades de Bac Bo e Aviator, partilhando análises, estratégias e orientações para quem quer aprender a operar com mais organização e disciplina.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <p>Contacta-me através dos links abaixo — Instagram, Telegram ou WhatsApp.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <p>Envia uma mensagem dizendo que queres fazer parte da comunidade.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <p>Vou explicar os requisitos e o processo de entrada.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <p>Depois de cumprires os requisitos, estás pronto para começar a acompanhar as operações ao vivo dentro da comunidade.</p>
+      </div>
+    </div>
+
+    <p style="color:var(--text-dim); font-size:15px; line-height:1.7; max-width:58ch; margin-top:26px;">
+      🔥 Não estás sozinho. Tens uma comunidade, acompanhamento e operações em tempo real para aprender e aplicar as estratégias.
+    </p>
+
+    <div class="media-grid video-grid" style="margin-top:26px;">
+      <div class="media-slot video-slot"><video controls playsinline preload="none" poster="video/poster1.jpg"><source src="video/video1.mp4" type="video/mp4"></video></div>
+      <div class="media-slot video-slot"><video controls playsinline preload="none" poster="video/poster2.jpg"><source src="video/video2.mp4" type="video/mp4"></video></div>
+    </div>
+
+    <div class="cta-row" style="margin-top:28px; justify-content:flex-start;">
+      <a class="btn btn-gold" href="https://t.me/mentor_de_milhoes?text=sauda%C3%A7%C3%B5es%20mentor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn btn-outline" href="https://wa.me/258874031855?text=Sauda%C3%A7%C3%B5es%20Mentor%20Saylor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/saylor_jr_calege/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">Provas reais</div>
+      <h2>O que a comunidade está a partilhar</h2>
+    </div>
+    <p style="font-family:var(--font-mono); font-size:12.5px; color:var(--text-dim); margin-bottom:18px;">2.500+ pessoas a jogar connosco</p>
+    <div class="media-grid">
+      <div class="media-slot"><img loading="lazy" src="img/prova1.webp" alt="Resultado Bac Bo"></div>
+      <div class="media-slot"><img loading="lazy" src="img/prova2.webp" alt="Resultado Bac Bo"></div>
+      <div class="media-slot"><img loading="lazy" src="img/prova3.webp" alt="Resultado Bac Bo"></div>
+      <div class="media-slot"><img loading="lazy" src="img/prova4.webp" alt="Resultado Bac Bo"></div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">A minha história</div>
+      <h2>Quem é o Saylor?</h2>
+    </div>
+    <div class="story">
+      <div class="pic">
+        <img loading="lazy" src="img/saylor.webp" alt="Saylor JR">
+      </div>
+      <div>
+        <p>Saylor é um jovem de 25 anos, licenciado em Economia pela Universidade Pedagógica, que entrou no mundo das apostas aos 20 anos.</p>
+        <p>Hoje, utiliza a experiência adquirida para desenvolver métodos e ajudar outras pessoas a operar de forma mais consciente e responsável.</p>
+        <div class="stat-row">
+          <div><b>25</b>anos</div>
+          <div><b>5</b>anos de experiência</div>
+          <div><b>2.500+</b>pessoas acompanhadas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <h2>Pronto para operar com mais critério?</h2>
+    <p class="sub">Escolhe o teu canal e fala comigo agora.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://t.me/mentor_de_milhoes?text=sauda%C3%A7%C3%B5es%20mentor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn btn-outline" href="https://wa.me/258874031855?text=Sauda%C3%A7%C3%B5es%20Mentor%20Saylor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/saylor_jr_calege/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brandline">MENTOR DE MILHÕES</div>
+    <p>© 2026 Saylor JR · Todos os direitos reservados.<br>
+    O jogo a dinheiro envolve risco de perda financeira. Joga com responsabilidade. Apenas maiores de idade. Este site não garante lucros — os resultados individuais variam.</p>
+  </footer>
+</div>
+
+<script>
+  // ticker content, duplicated for seamless loop
+  const items = [
+    'BAC BO <span class="up">GESTÃO DE RISCO</span>',
+    'AVIATOR <span class="down">SEM GARANTIAS DE LUCRO</span>',
+    'MZN · EUR · USD',
+    'SALA VIP <span class="up">VAGAS ABERTAS</span>',
+    'DISCIPLINA > SORTE',
+    '+18 · JOGO RESPONSÁVEL'
+  ];
+  const track = document.getElementById('tickerTrack');
+  const html = items.map(i => `<span>${i}</span>`).join('<span style="color:var(--line)">·</span>');
+  track.innerHTML = html + html; // duplicate for loop
+</script>
+
+</body>
+</html>
