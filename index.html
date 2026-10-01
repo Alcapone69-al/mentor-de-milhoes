@@ -231,6 +231,11 @@
   .lightbox.open{display:flex;}
   .lightbox img{max-width:100%; max-height:100%; border-radius:8px;}
 
+  .account-band{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 20px; border-radius:14px; border:1px solid var(--gold-dim); background:linear-gradient(90deg, rgba(216,169,75,.12), rgba(216,169,75,.03)); text-decoration:none; color:var(--text); font-size:14.5px; line-height:1.5;}
+  .account-band b{color:var(--gold);}
+  .account-band:hover{border-color:var(--gold);}
+  .ab-arrow{font-family:var(--font-mono); font-size:13px; color:var(--gold); white-space:nowrap;}
+  @media (max-width:600px){.account-band{flex-direction:column; align-items:flex-start;}}
   /* ---------- steps ---------- */
   .steps{display:flex; flex-direction:column; gap:0; max-width:58ch;}
   .step{
@@ -428,6 +433,13 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <a class="account-band" href="cadastro/">
+      <span><b>Ainda não tens conta?</b> Cria a tua conta em euro, dólar ou metical e vê os vídeos passo a passo.</span>
+      <span class="ab-arrow">Criar conta →</span>
+    </a>
   </section>
 
   <section class="section">
