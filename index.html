@@ -197,15 +197,16 @@
     max-width:20ch;
   }
 
-  .offers{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  @media (max-width:680px){.offers{grid-template-columns:1fr;}}
+  .offers{display:flex; flex-direction:column; gap:18px;}
   .offer{
     background:var(--bg-panel);
     border:1px solid var(--line);
     border-radius:14px;
     padding:26px 24px;
-    display:flex; flex-direction:column; gap:14px;
+    display:grid; grid-template-columns:1fr 240px; gap:20px 28px; align-items:start;
   }
+  @media (max-width:680px){.offer{grid-template-columns:1fr; padding:22px 18px;}}
+  .offer-text{display:flex; flex-direction:column; gap:14px;}
   .offer .tag{
     font-family:var(--font-mono); font-size:11px; color:var(--text-dim);
     text-transform:uppercase; letter-spacing:.06em;
@@ -213,8 +214,22 @@
   .offer h3{
     font-family:var(--font-display); font-weight:500; font-size:21px;
   }
-  .offer p{color:var(--text-dim); font-size:14.5px; line-height:1.6; flex-grow:1;}
-  .offer .btn{width:100%; justify-content:center; margin-top:4px;}
+  .offer p{color:var(--text-dim); font-size:14.5px; line-height:1.6;}
+  .offer .btn{justify-content:center; margin-top:4px; align-self:flex-start;}
+  @media (max-width:680px){.offer .btn{width:100%; align-self:stretch;}}
+  .offer-video{aspect-ratio:9/16; border-radius:10px; overflow:hidden; background:#000; border:1px solid var(--line); position:relative;}
+  .offer-video video{width:100%; height:100%; object-fit:cover; display:block;}
+  .offer-video .vlabel{position:absolute; top:8px; left:8px; font-family:var(--font-mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; background:rgba(10,15,20,.75); color:var(--gold); padding:4px 7px; border-radius:6px; pointer-events:none;}
+  @media (max-width:680px){.offer-video{max-width:300px; width:100%; justify-self:center;}}
+  .offer-proofs{grid-column:1 / -1; border-top:1px solid var(--line); padding-top:18px;}
+  .offer-proofs h4{font-family:var(--font-mono); font-size:11.5px; font-weight:500; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px;}
+  .proof-strip{display:flex; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px; -webkit-overflow-scrolling:touch;}
+  .proof-strip img{height:260px; width:auto; flex:0 0 auto; border-radius:8px; border:1px solid var(--line); scroll-snap-align:start; cursor:zoom-in; background:var(--bg-panel-2);}
+  @media (max-width:680px){.proof-strip img{height:230px;}}
+  .proof-hint{font-family:var(--font-mono); font-size:10.5px; color:var(--text-dim); margin-top:6px;}
+  .lightbox{position:fixed; inset:0; background:rgba(5,8,11,.92); display:none; align-items:center; justify-content:center; z-index:100; padding:16px; cursor:zoom-out;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:100%; max-height:100%; border-radius:8px;}
 
   /* ---------- steps ---------- */
   .steps{display:flex; flex-direction:column; gap:0; max-width:58ch;}
@@ -365,16 +380,52 @@
     </div>
     <div class="offers">
       <div class="offer">
-        <div class="tag">Sala VIP · Bac Bo</div>
-        <h3>Operações ao vivo com apoio de IA</h3>
-        <p>Acompanha as operações em tempo real com o suporte da minha IA, entendendo cada entrada e o raciocínio por trás dela — sem promessas de lucro garantido.</p>
-        <a class="btn btn-gold" href="https://t.me/mentor_de_milhoes?text=sauda%C3%A7%C3%B5es%20mentor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">Entrar na Sala VIP</a>
+        <div class="offer-text">
+          <div class="tag">Sala VIP · Bac Bo</div>
+          <h3>Operações ao vivo com apoio de IA</h3>
+          <p>Acompanha as operações em tempo real com o suporte da minha IA, entendendo cada entrada e o raciocínio por trás dela — sem promessas de lucro garantido.</p>
+          <a class="btn btn-gold" href="https://t.me/mentor_de_milhoes?text=sauda%C3%A7%C3%B5es%20mentor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">Entrar na Sala VIP</a>
+        </div>
+        <div class="offer-video">
+          <span class="vlabel">A IA a funcionar</span>
+          <video controls playsinline preload="none" poster="video/poster-bacbo.jpg"><source src="video/bacbo-ia.mp4" type="video/mp4"></video>
+        </div>
+        <div class="offer-proofs">
+          <h4>O que a comunidade de Bac Bo partilha</h4>
+          <div class="proof-strip">
+            <img loading="lazy" src="img/bacbo5.webp" alt="Partilha da comunidade Bac Bo">
+            <img loading="lazy" src="img/bacbo6.webp" alt="Partilha da comunidade Bac Bo">
+            <img loading="lazy" src="img/bacbo7.webp" alt="Partilha da comunidade Bac Bo">
+            <img loading="lazy" src="img/bacbo8.webp" alt="Partilha da comunidade Bac Bo">
+            <img loading="lazy" src="img/prova1.webp" alt="Partilha da comunidade Bac Bo">
+            <img loading="lazy" src="img/prova2.webp" alt="Partilha da comunidade Bac Bo">
+            <img loading="lazy" src="img/prova3.webp" alt="Partilha da comunidade Bac Bo">
+            <img loading="lazy" src="img/prova4.webp" alt="Partilha da comunidade Bac Bo">
+          </div>
+          <div class="proof-hint">← Desliza para ver mais · toca para ampliar</div>
+        </div>
       </div>
       <div class="offer">
-        <div class="tag">Comunidade · Aviator</div>
-        <h3>Estratégia em Euro, Dólar ou Metical</h3>
-        <p>Aprende a operar Aviator com método e gestão de banca, na moeda que preferires, com uma comunidade focada em disciplina e consciência de risco.</p>
-        <a class="btn btn-gold" href="https://wa.me/258874031855?text=Sauda%C3%A7%C3%B5es%20Mentor%20Saylor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <div class="offer-text">
+          <div class="tag">Comunidade · Aviator</div>
+          <h3>Estratégia em Euro, Dólar ou Metical</h3>
+          <p>Aprende a operar Aviator com método e gestão de banca, na moeda que preferires, com uma comunidade focada em disciplina e consciência de risco.</p>
+          <a class="btn btn-gold" href="https://wa.me/258874031855?text=Sauda%C3%A7%C3%B5es%20Mentor%20Saylor%2C%20gostaria%20de%20operar%20contigo" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+        <div class="offer-video">
+          <span class="vlabel">Aviator ao vivo</span>
+          <video controls playsinline preload="none" poster="video/poster-aviator.jpg"><source src="video/aviator.mp4" type="video/mp4"></video>
+        </div>
+        <div class="offer-proofs">
+          <h4>O que a comunidade de Aviator partilha</h4>
+          <div class="proof-strip">
+            <img loading="lazy" src="img/aviator1.webp" alt="Partilha da comunidade Aviator">
+            <img loading="lazy" src="img/aviator2.webp" alt="Partilha da comunidade Aviator">
+            <img loading="lazy" src="img/aviator3.webp" alt="Partilha da comunidade Aviator">
+            <img loading="lazy" src="img/aviator4.webp" alt="Partilha da comunidade Aviator">
+          </div>
+          <div class="proof-hint">← Desliza para ver mais · toca para ampliar</div>
+        </div>
       </div>
     </div>
   </section>
@@ -475,6 +526,14 @@
   const track = document.getElementById('tickerTrack');
   const html = items.map(i => `<span>${i}</span>`).join('<span style="color:var(--line)">·</span>');
   track.innerHTML = html + html; // duplicate for loop
+
+  // lightbox
+  const lb=document.createElement('div'); lb.className='lightbox'; lb.innerHTML='<img alt="">'; document.body.appendChild(lb);
+  document.querySelectorAll('.proof-strip img').forEach(im=>im.addEventListener('click',()=>{lb.firstChild.src=im.src; lb.classList.add('open');}));
+  lb.addEventListener('click',()=>lb.classList.remove('open'));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open');});
+  // only one video playing at a time
+  document.querySelectorAll('video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video').forEach(o=>{if(o!==v)o.pause();})));
 </script>
 
 </body>
